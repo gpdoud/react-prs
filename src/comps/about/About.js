@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Footer from '../footer/Footer';
 import Header from '../header/Header';
 
-class About extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { title: 'AboutComponent' }
-    }
-    render() {
-        return (
-            <div>
-                <Header />
-                <p>{this.state.title} works!</p>
-            </div>
-        );
-    }
+// import System from '../system/System';
+// import Context from '../../App';
+
+const About = () => {
+    return (
+        <div>
+            <Header />
+            <p>AboutComponent works!</p>
+            <Footer />
+        </div>
+    );
 }
 export default About;

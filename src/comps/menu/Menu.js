@@ -1,30 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Menu.css';
 
-class Menu extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            menus: [
-                { display: 'Home', route: '/home' },
-                { display: 'About', route: '/about' }
-            ] 
-        }
-    }
-    render() {
-        return (
-            <nav>
-                <ul>
-                    {
-                        this.state.menus.map(m => 
-                            <li>
-                                <a href={m.route}>{m.display}</a>
-                            </li>
-                        )
-                    }
-                </ul>
-            </nav>
-        );
-    }
+let menus = [
+    { key: 1, display: 'Home', route: '/home' },
+    { key: 2, display: 'Userlist', route: '/user/list' },
+    { key: 3, display: 'About', route: '/about' }
+];
+
+const Menu = () => {
+    return (
+        <nav>
+            <ul>
+                {
+                    menus.map(m => 
+                        <li key={m.key}>
+                            <a href={m.route}>{m.display}</a>
+                        </li>
+                    )
+                }
+            </ul>
+        </nav>
+    );
 }
 export default Menu;

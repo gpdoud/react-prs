@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+// import { useContext } from 'react';
 import './App.css';
 import Home from './comps/home/Home';
 import About from './comps/about/About';
-// import Menu from './comps/menu/Menu';
+import Userlist from './comps/user/user-list/Userlist';
+// import System from './comps/system/System';
 
-function App() {
+const App = () => {
   return (
     <main>
       <Switch>
         <Route path='/home' component={Home} />
+        <Route path='/user/list' component={Userlist} />
         <Route path='/about' component={About} />
       </Switch>
     </main>

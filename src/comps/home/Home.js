@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { title: 'HomeComponent' }
-    }
-    render() {
-        return (
-            <div>
-                <Header />
-                <p>{this.state.title} works!</p>
-                <Footer />
-            </div>
-        );
-    }
+// import System from '../system/System';
+
+const Home = () => {
+    return (
+        <div>
+            <Header />
+            <p>HomeComponent works!</p>
+            <Footer />
+        </div>
+    );
 }
 export default Home;
